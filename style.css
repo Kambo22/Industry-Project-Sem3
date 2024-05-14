@@ -1,0 +1,63 @@
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+.navbar-logo {
+    margin: 0;
+}
+.navbar-menu {
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.navbar-menu li {
+    margin-right: 20px;
+}
+/* Hamburger menu */
+.navbar-toggle {
+    cursor: pointer;
+    display: block;
+    padding: 10px 15px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+}
+/* Sections */
+.section {
+    padding: 50px 0;
+    text-align: center;
+}
+.section-1 {
+    background-color: #f2f2f2;
+}
+.section-2 {
+    background-color: #ccc;
+}
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+/* Grid */
+.grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid-item {
+    padding: 20px;
+}
