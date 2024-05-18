@@ -27,7 +27,9 @@ function showDialogueAndSetTime(dialogueId, seconds, duration) {
 }
 
 function showPopup() {
-    document.getElementById("intstory").style.display = "flex";
+    var popup = document.getElementById("intstory");
+    popup.style.display = "flex";
+    popup.style.animation = "fadeInUp 0.5s forwards";
 }
 
 function hidePopup() {
