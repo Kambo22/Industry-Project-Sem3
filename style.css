@@ -26,9 +26,9 @@ body {
     display: none;
     background: #e30e13;
     position: absolute;
-    top: 10%; /* Position it below the navbar */
+    top: 81px; /* Position it below the navbar */
     right: 0; /* Align it to the right */
-    width: 7%;
+    width: 10%;
     text-align: center;
     transition: display 0.3s ease; /* Add transition for smooth effect */
 }
@@ -76,6 +76,9 @@ body {
   .active {
     background-color: #e30e13;
     color: white;
+  }
+  #myLinks a:hover{
+    background-color: #ca191c;
   }
 /* Sections */
 .section {
