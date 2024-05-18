@@ -30,7 +30,6 @@ body {
     right: 0; /* Align it to the right */
     width: 10%;
     text-align: center;
-    transition: display 0.3s ease; /* Add transition for smooth effect */
 }
 
 #myLinks a {
@@ -95,7 +94,7 @@ body {
 footer {
     background-color: #333;
     color: #fff;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
 }
 /* Grid */
@@ -106,4 +105,11 @@ footer {
 }
 .grid-item {
     padding: 20px;
+}
+h4{
+    font-size: large;
+}
+.fa{
+    margin-left: 20px;
+    margin-right: 20px;
 }
