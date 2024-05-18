@@ -6,6 +6,7 @@
     <title>Your Website</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <script src="intstory.js"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -32,10 +33,45 @@
                     Eindhoven in World War II. Experience their challenges, courage, and resilience firsthand as they navigate this historic period. 
                     Join us in honoring their enduring spirit.
                 </p>
-                <a href="#">Click here to see their story</a>
+                <a href="#" onclick="showPopup()">Click here to see their story</a>
             </div>
         </div>
     </section>
+    
+    <div class="intstory" id="intstory">
+        <div class="content">
+            <span class="close" onclick="hidePopup()">&times;</span>
+            <section class="video">
+                <video id="myVideo" controls>
+                    <source src="media/video.mp4" type="video/mp4">
+                </video>
+            </section>
+            <div class="dialogue" data-dialogue="A">
+                <a href="#" onclick="showDialogueAndSetTime('X', 10, 10)">Option A</a>
+                <a href="#" onclick="showDialogueAndSetTime('Y', 60, 10)">Option B</a> 
+                <a href="#" onclick="showDialogueAndSetTime('Z', 60, 10)">Option C</a> 
+            </div>
+            <div class="dialogue" data-dialogue="X">
+                <a href="#" onclick="showDialogueAndSetTime('X1', 10, 10)">Option X</a>
+            </div>
+            <div class="dialogue" data-dialogue="Y">
+                <a href="#" onclick="showDialogueAndSetTime('Y1', 10, 10)">Option Y</a>
+            </div>
+            <div class="dialogue" data-dialogue="Z">
+                <a href="#" onclick="showDialogueAndSetTime('Z1', 10, 10)">Option Z</a>
+            </div>
+            <div class="dialogue" data-dialogue="X1">
+                <a href="#" onclick="showDialogueAndSetTime('Z', 10, 10)">Option X1</a>
+            </div>
+            <div class="dialogue" data-dialogue="Y1">
+                <a href="#" onclick="showDialogueAndSetTime('Z', 10, 10)">Option Y1</a>
+            </div>
+            <div class="dialogue" data-dialogue="Z1">
+                <a href="#" onclick="showDialogueAndSetTime('Z', 10, 10)">Option Z1</a>
+            </div>
+        </div>
+    </div>
+    
     
 
     <!-- Section 2 -->
