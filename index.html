@@ -5,23 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.js"></script>
     <script src="intstory.js"></script>
 </head>
-<body>
+<body>    
     <!-- Navbar -->
-    <nav class="navbar">
-        <h1 class="navbar-logo">Your Logo</h1>
-        <button class="navbar-toggle">&#9776;</button>
-        <ul class="navbar-menu">
-            <li><a href="#">Title 1</a></li>
-            <li><a href="#">Title 2</a></li>
-            <li><a href="#">Title 3</a></li>
-            <li><a href="#">Title 4</a></li>
-            <li><a href="#">Title 5</a></li>
-        </ul>
-    </nav>
-
+        <nav class="navbar">
+            <figure>
+                <img src="media/logo.png" class="logo">
+            </figure>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+        </nav>
+        <div id="myLinks">
+            <a href="#">Read Their Stories</a>
+            <a href="#">18 September</a>
+            <a href="#">Multimedium</a>
+        </div>
     <!-- Section 1 -->
     <section class="section section-1">
         <div class="image-container">
@@ -105,6 +107,21 @@
 
     <!-- Footer -->
     <footer>
+        <section class="info">
+        <section class="address">
+            <h5>Stichting 18 September</h5>
+            <h6>Address:</h6>
+            <p>Postbus 1390, 5602 BJ  Eindhoven</p>
+        </section>
+        <section class="contact">
+            <h4>Contacts</h4>
+                <a href="https://www.instagram.com/stichting_18_september/" class="fa fa-instagram"> Instagram</a>
+                <a href="https://www.facebook.com/stichting18september" class="fa fa-facebook"> Facebook</a>
+            <div class="email">
+                <a href="" class="fa fa-google"> info@stichting18september.nl</a>
+            </div>
+        </section>
+        </section>
         <p>&copy; 2024 Your Website. All rights reserved.</p>
     </footer>
 </body>
