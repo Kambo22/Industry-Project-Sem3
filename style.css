@@ -63,6 +63,33 @@ body {
     cursor: pointer;
 }
 
+  .navbar a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+
+  .a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .active {
+    background-color: #e30e13;
+    color: white;
+  }
+  #myLinks a:hover{
+    background-color: #ca191c;
+  }
+  .navbar a:hover{
+    background-color: #ca191c
+  }
+
+
+
 /* Sections */
 
 .section-1 {
@@ -318,6 +345,7 @@ video {
 
 
 
+
 /* Footer */
 footer {
     background-color: #333;
@@ -325,17 +353,37 @@ footer {
     padding: 1px;
     text-align: center;
 }
-
 /* Grid */
 .grid {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; 
 }
-
 .grid-item {
     padding: 20px;
-    color: white;
 }
+h4{
+    font-size: 28px;
+}
+h5{
+    font-size: 28px;
+}
+h6{
+    font-size: 20px;
+}
+h6 p{
+    font-size: 18px;
+}
+.fa{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.info{
+    display: grid;
+    grid-template-columns: 45% 59%;
+}
+.contact .email a{
+    pointer-events: none;
+}
+
+
