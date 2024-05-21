@@ -10,14 +10,16 @@
 }
 
 body {
-    font-family: 'Alatsi',Helvetica,Arial,Lucida,sans-serif;
+    font-family: pars;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    background-color: black;
 }
 
 /* Navbar */
 .navbar {
+    font-family: headings;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,6 +44,7 @@ body {
     right: 0; /* Align it to the right */
     width: 10%;
     text-align: center;
+    z-index: 1000;
 }
 
 #myLinks a {
@@ -62,15 +65,6 @@ body {
     font-size: 24px;
     cursor: pointer;
 }
-
-  .navbar a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-  }
-  
 
   .a:hover {
     background-color: #ddd;
@@ -132,6 +126,7 @@ body {
     border-radius: 10px; 
     height: 400px;
     width: 50%;
+    text-align: center;
 }
 
 .text-container1 h2 {
@@ -325,8 +320,6 @@ video {
 }
 .overlay img{
     position: relative;
-    float: left;
-    top: 2%;
     width:  100px;
     height: 100px;
     background-position: 50% 50%;
@@ -385,5 +378,14 @@ h6 p{
 .contact .email a{
     pointer-events: none;
 }
+
+.contact a, .navbar a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+
 
 
