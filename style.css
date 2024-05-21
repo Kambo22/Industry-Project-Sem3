@@ -1,10 +1,21 @@
 /* Basic styling */
+@font-face {
+    font-family: pars;
+    src: url(media/TK3iWkUJAxQ2nLN2Fz8G.woff2);
+}
+
+@font-face {
+    font-family: headings;
+    src: url(media/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4uaVI.woff2);
+}
+
 body {
     font-family: 'Alatsi',Helvetica,Arial,Lucida,sans-serif;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
+
 /* Navbar */
 .navbar {
     display: flex;
@@ -240,8 +251,72 @@ video {
 
 
 .section-2 {
-    background-color: #ccc;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 255, 0.5); 
+    z-index: 2; 
+}
+
+
+.overlay {
+    position: relative;
+    z-index: 3; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.overlay img{
+    position: relative;
+    float: left;
+    top: 2%;
+    width:  100px;
+    height: 100px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+}
+.section-2 h2 {
+    font-size: 300%;
+    font-family: headings;
+    color: #fff;
+}
+
+.section-2 p, .section-2 h3 {
+    color: #fff;
+}
+
 /* Footer */
 footer {
     background-color: #333;
@@ -249,35 +324,17 @@ footer {
     padding: 1px;
     text-align: center;
 }
+
 /* Grid */
 .grid {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap; 
 }
+
 .grid-item {
     padding: 20px;
-}
-h4{
-    font-size: 28px;
-}
-h5{
-    font-size: 28px;
-}
-h6{
-    font-size: 20px;
-}
-h6 p{
-    font-size: 18px;
-}
-.fa{
-    margin-left: 20px;
-    margin-right: 20px;
-}
-.info{
-    display: grid;
-    grid-template-columns: 45% 59%;
-}
-.contact .email a{
-    pointer-events: none;
+    color: white;
 }
