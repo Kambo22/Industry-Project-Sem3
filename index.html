@@ -5,30 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.js"></script>
+    <script src="intstory.js"></script>
 </head>
-<body>
+<body>    
     <!-- Navbar -->
-    <nav class="navbar">
-        <h1 class="navbar-logo">Your Logo</h1>
-        <button class="navbar-toggle">&#9776;</button>
-        <ul class="navbar-menu">
-            <li><a href="#">Title 1</a></li>
-            <li><a href="#">Title 2</a></li>
-            <li><a href="#">Title 3</a></li>
-            <li><a href="#">Title 4</a></li>
-            <li><a href="#">Title 5</a></li>
-        </ul>
-    </nav>
-
+        <nav class="navbar">
+            <figure>
+                <img src="media/logo.png" class="logo">
+            </figure>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+        </nav>
+        <div id="myLinks">
+            <a href="#">Read Their Stories</a>
+            <a href="#">18 September</a>
+            <a href="#">Multimedium</a>
+        </div>
     <!-- Section 1 -->
     <section class="section section-1">
-        <div>
-            <img src="your-image.jpg" alt="Your Image" style="max-width: 100%;">
-            <h2>Text in the Middle</h2>
+        <div class="image-container">
+            <img src="media/main.jpg" alt="Your Image">
+            <div class="text-container1">
+                <h2>18th September Foundation</h2>
+                <p>
+                    Explore interactive stories of individuals who lived through the liberation of 
+                    Eindhoven in World War II. Experience their challenges, courage, and resilience firsthand as they navigate this historic period. 
+                    Join us in honoring their enduring spirit.
+                </p>
+                <a href="#" onclick="showPopup()">Click here to see their story</a>
+            </div>
         </div>
     </section>
-
+    
+    <div class="intstory" id="intstory">
+        <div class="content">
+            <span class="close" onclick="hidePopup()">&times;</span>
+            <section class="video" id="videoSection">
+                <video id="myVideo" controls>
+                    <source src="media/video.mp4" type="video/mp4">
+                </video>
+            </section>
+            <div class="choices" id="popupChoices" style="display:none;">
+                <!-- Choices will be displayed here -->
+            </div>
+            <div class="dialogue" data-dialogue="A">
+                <a href="#" onclick="showDialogueAndSetTime('X', 10, 10, 'Option A')">Option A</a>
+                <a href="#" onclick="showDialogueAndSetTime('Y', 60, 10, 'Option B')">Option B</a> 
+                <a href="#" onclick="showDialogueAndSetTime('Z', 60, 10, 'Option C')">Option C</a> 
+            </div>
+            <div class="dialogue" data-dialogue="X">
+                <a href="#" onclick="showDialogueAndSetTime('X1', 10, 10, 'Option X')">Option X</a>
+            </div>
+            <div class="dialogue" data-dialogue="Y">
+                <a href="#" onclick="showDialogueAndSetTime('Y1', 10, 10, 'Option Y')">Option Y</a>
+            </div>
+            <div class="dialogue" data-dialogue="Z">
+                <a href="#" onclick="showDialogueAndSetTime('Z1', 10, 10, 'Option Z')">Option Z</a>
+            </div>
+            <div class="dialogue" data-dialogue="X1">
+                <a href="#" onclick="showDialogueAndSetTime('E', 10, 10, 'Option X1')">Option X1</a>
+            </div>
+            <div class="dialogue" data-dialogue="Y1">
+                <a href="#" onclick="showDialogueAndSetTime('E', 10, 10, 'Option Y1')">Option Y1</a>
+            </div>
+            <div class="dialogue" data-dialogue="Z1">
+                <a href="#" onclick="showDialogueAndSetTime('E', 10, 10, 'Option Z1')">Option Z1</a>
+            </div>
+            <div class="dialogue" data-dialogue="E" id="endDialogue">
+                <a href="#" onclick="endDialogue()">END</a>
+            </div>
+        </div>
+    </div>
+    
     <!-- Section 2 -->
     <section class="section section-2">
         <div class="background">
@@ -60,6 +111,21 @@
 
     <!-- Footer -->
     <footer>
+        <section class="info">
+        <section class="address">
+            <h5>Stichting 18 September</h5>
+            <h6>Address:</h6>
+            <p>Postbus 1390, 5602 BJ  Eindhoven</p>
+        </section>
+        <section class="contact">
+            <h4>Contacts</h4>
+                <a href="https://www.instagram.com/stichting_18_september/" class="fa fa-instagram"> Instagram</a>
+                <a href="https://www.facebook.com/stichting18september" class="fa fa-facebook"> Facebook</a>
+            <div class="email">
+                <a href="" class="fa fa-google"> info@stichting18september.nl</a>
+            </div>
+        </section>
+        </section>
         <p>&copy; 2024 Your Website. All rights reserved.</p>
     </footer>
 </body>
