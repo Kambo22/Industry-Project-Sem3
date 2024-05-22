@@ -162,6 +162,7 @@ body {
 
 video {
     height: 600px;
+    pointer-events: none;
 }
 
 .dialogue {
