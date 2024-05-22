@@ -19,6 +19,7 @@ body {
 
 /* Navbar */
 .navbar {
+    position: sticky;
     font-family: headings;
     display: flex;
     justify-content: space-between;
@@ -27,11 +28,12 @@ body {
     color: #fff;
     padding: 0px 28px;
     overflow: hidden;
-    position: relative;
+    z-index: 999;
+    
 }
 
 .logo {
-    width: 30%;
+    width: 40%;
     max-width: 100%;
     margin: 0 auto; /* Center the logo horizontally */
 }
@@ -111,7 +113,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(48, 48, 48, 0.79); 
+    background: rgba(48, 48, 48, 0.911); 
     mix-blend-mode: multiply; 
     pointer-events: none; 
 }
@@ -304,7 +306,7 @@ video {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 255, 0.5); 
+    background-color: rgba(1, 1, 97, 0.792); 
     z-index: 2; 
 }
 
@@ -343,7 +345,7 @@ video {
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: #1f1e1e;
     color: #fff;
     padding: 1px;
     text-align: center;
