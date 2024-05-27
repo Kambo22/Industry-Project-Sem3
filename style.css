@@ -24,7 +24,7 @@ body {
 }
 
 /* Navbar */
-.navbar {
+header {
     position: fixed;
     width: 100vw;
     height: 7.5vmin;
@@ -96,7 +96,7 @@ body {
 #myLinks a:hover{
     background-color: #ca191c;
 }
-.navbar a:hover{
+header a:hover{
     background-color: #ca191c
 }
 
@@ -162,19 +162,28 @@ body {
 }
 
 .text-container1 a {
+    background-color: rgba(202, 25, 28, 0.753);
+    border-radius: 100vmin;
+    backdrop-filter: blur(1vmin);
     color: white;
     text-decoration: none;
     font-size: 3vmin;
     display: block; 
     width: fit-content; 
-    margin: 0 auto; 
     text-align: center; 
-    transition: font-size 0.3s ease;
-    padding-top: 5vmin;
+    transition: all 0.3s ease;
+    margin-top: 5vmin;
+    padding: 1vh 2vw;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .text-container1 a:hover {
     font-size: 3.1vmin;
+}
+
+.text-container1 a:active {
+    box-shadow: none;
+    transform: translateY(0.75vh);
 }
 
 .video {
@@ -444,66 +453,64 @@ video {
 /* Footer */
 footer {
     background-color: #1f1e1e;
-    color: #fff;
-    padding: 1px;
-    text-align: center;
-}
-/* Grid */
-.grid {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    height: 20vh;
+    position: relative;
 }
-.grid-item {
-    padding: 20px;
+
+.infoFooter {
+    color: #fff;
+    text-align: center;
+    margin-left: 25vw;
 }
-h4{
-    font-size: 28px;
-    margin-top: 2vh;
+
+.infoFooter > h1 { 
+    font-size: 3vmin;
+    font-family: "headings";
 }
-h5{
-    font-size: 28px;
+
+.infoFooter > p { 
+    font-size: 1.85vmin;
+    font-family: "pars";
+    font-weight: 100;
 }
-h6{
-    font-size: 20px;
+
+.contactFooter {
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 25vw;
 }
-h6 p{
-    font-size: 18px;
+
+.contactFooter > h1{
+    font-size: 3vmin;
+    font-family: "headings";
 }
+
+.contactFooter > a{
+    font-size: 1.85vmin;
+    font-weight: 100;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 1vh;
+}
+
 .fa{
     margin-left: 20px;
     margin-right: 20px;
 }
-.info{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+.copyrightText{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-family: 'pars';
+    font-weight: 100;
 }
-
-.contact{
-    width: fit-content;
-    margin-right: 20vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contact .email a{
-    pointer-events: none;
-}
-
-/* Okay the header and the footer somehow linked, rewrite this */
-.contact a{
-    color: white;
-    margin: 2vh 0;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-    width: fit-content;
-}
-
-.address{
-    margin-left: 20vw;
-}
-
-

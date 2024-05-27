@@ -2,12 +2,10 @@
     TODO:
     - Fix class naming issue
         - The footer link is connected to the menu button in the header
-        - Should be "header" instead of "navbar"
         - Basically name them properly, whats "background", where is it for.
 
     - Clean up the CSS, if that's even possible
     - Add animation so it doesn't feel like it's from the 2010s
-    - Add an indication showing the "Click here to see their story" button, a clickable button
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -17,6 +15,7 @@
     <title>Your Website</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="media/logo.png" type="image/x-icon">
     <!-- I suggest we should not link font awesome like this, instead we will download the icons as an SVG, and then put it inside the web -->
 
     <script src="script.js"></script>
@@ -25,7 +24,7 @@
 <body>    
     <!-- Navbar -->
     <!-- This is a header -->
-        <nav class="navbar">
+        <header>
             <figure>
                 <img src="media/logo.png" class="logo">
             </figure>
@@ -33,7 +32,7 @@
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
             </a>
-        </nav>
+        </header>
         <div id="myLinks">
             <a href="#">Read Their Stories</a>
             <a href="#">18 September</a>
@@ -135,22 +134,21 @@
 
     <!-- Footer -->
     <footer>
-        <section class="info">
-        <section class="address">
-            <h5>Stichting 18 September</h5>
-            <h6>Address:</h6>
+        <section class="infoFooter">
+            <h1>
+                Stichting 18 September
+                <br>
+                Address:
+            </h1>
             <p>Postbus 1390, 5602 BJ  Eindhoven</p>
         </section>
-        <section class="contact">
-            <h4>Contacts</h4>
-                <a href="https://www.instagram.com/stichting_18_september/" class="fa fa-instagram"> Instagram</a>
-                <a href="https://www.facebook.com/stichting18september" class="fa fa-facebook"> Facebook</a>
-            <div class="email">
-                <a href="" class="fa fa-google"> info@stichting18september.nl</a>
-            </div>
+        <section class="contactFooter">
+            <h1>Contacts</h1>
+            <a href="https://www.instagram.com/stichting_18_september/" class="fa fa-instagram"> Instagram</a>
+            <a href="https://www.facebook.com/stichting18september" class="fa fa-facebook"> Facebook</a>
+            <a href="" class="fa fa-google"> info@stichting18september.nl</a>
         </section>
-        </section>
-        <p>&copy; 2024 Your Website. All rights reserved.</p>
+        <p class="copyrightText">&copy; 2024 Your Website. All rights reserved.</p>
     </footer>
 </body>
 </html>
