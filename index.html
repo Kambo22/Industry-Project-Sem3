@@ -1,3 +1,14 @@
+<!-- 
+    TODO:
+    - Fix class naming issue
+        - The footer link is connected to the menu button in the header
+        - Should be "header" instead of "navbar"
+        - Basically name them properly, whats "background", where is it for.
+
+    - Clean up the CSS, if that's even possible
+    - Add animation so it doesn't feel like it's from the 2010s
+    - Add an indication showing the "Click here to see their story" button, a clickable button
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,18 +17,22 @@
     <title>Your Website</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- I suggest we should not link font awesome like this, instead we will download the icons as an SVG, and then put it inside the web -->
+
     <script src="script.js"></script>
     <script src="intstory.js"></script>
 </head>
 <body>    
     <!-- Navbar -->
+    <!-- This is a header -->
         <nav class="navbar">
             <figure>
                 <img src="media/logo.png" class="logo">
             </figure>
-              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
-              </a>
+            </a>
         </nav>
         <div id="myLinks">
             <a href="#">Read Their Stories</a>
@@ -30,6 +45,10 @@
             <img src="media/main.jpg" alt="Your Image">
             <div class="text-container1">
                 <h2>18th September Foundation</h2>
+                <!-- Could change wordings -->
+                <!-- Explore our interactive stories of individuals who lived through the liberation of 
+                    Eindhoven in World War II, learning from their experiences, challenges, courage and resilience firsthand as they navigate this historic period. -->
+                <!-- that's it -->
                 <p>
                     Explore interactive stories of individuals who lived through the liberation of 
                     Eindhoven in World War II. Experience their challenges, courage, and resilience firsthand as they navigate this historic period. 
@@ -82,32 +101,37 @@
     
     <!-- Section 2 -->
     <section class="section section-2">
-        <div class="background">
-            <img src="media/monument-background.jpg" alt="">
-            <div class="overlay">
-                <img src="media/logo.png" alt="Your Logo" style="max-width: 300px;">
-                <h2>STICHTING 18 SEPTEMBER</h2>
-                <p>Some text below those two.</p>
-                <div class="grid">
-                    <div class="grid-item">
-                        <h3>Grid Item 1</h3>
-                        <p>Description of grid item 1.</p>
-                    </div>
-                    <div class="grid-item">
-                        <h3>Grid Item 2</h3>
-                        <p>Description of grid item 2.</p>
-                    </div>
-                    <div class="grid-item">
-                        <h3>Grid Item 3</h3>
-                        <p>Description of grid item 3.</p>
-                    </div>
+        <section class="textDataSection2">
+            <img src="media/logo.png" class="logoSection2">
+            <h1 class="companyTitleSection2">
+                STICHTING 18 SEPTEMBER
+            </h1>
+            <h2 class="companyMottoSection2">
+                Company Motto thing
+            </h2>
+            <div class="bottomFlexboxSection2">
+                <div class="textBox">
+                    <img src="media/profilePlaceHolder.svg">
+                    <h1>John Doe</h1>
+                    <h2>"This is a quote from this specific higher ups"</h2>
+                </div>
+
+                <div class="textBox">
+                    <img src="media/profilePlaceHolder.svg">
+                    <h1>Jane Doe</h1>
+                    <h2>"This is a quote from this specific higher ups"</h2>
+                </div>
+
+                <div class="textBox">
+                    <img src="media/profilePlaceHolder.svg">
+                    <h1>John Doe</h1>
+                    <h2>"This is a quote from this specific higher ups"</h2>
                 </div>
             </div>
-        </div>
+
+        </section>
+        <div class="filterBGSection2"></div>
     </section>
-    
-    <!-- Grid -->
-    
 
     <!-- Footer -->
     <footer>
