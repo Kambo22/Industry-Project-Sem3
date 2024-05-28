@@ -1,6 +1,6 @@
 /* Basic styling */
 /* Reset */
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -19,7 +19,7 @@ body {
     font-family: pars;
     margin: 0;
     padding: 0;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     background-color: black;
 }
 
@@ -27,59 +27,79 @@ body {
 header {
     position: fixed;
     width: 100vw;
-    height: 7.5vmin;
+    height: 7.5vh;
     font-family: headings;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #e30e13;
     color: #fff;
-    /* padding: 0px 28px; use vmin instead of px, not all resolutions are the same */
-    /* overflow: hidden; no need for overflow?*/
     z-index: 999;
     padding: 1.5vmin 0;
 }
 
 .logo {
-    width: 40%;
-    /* max-width: 100%; probably no need for this */
-    /* margin: 0 auto; No need for this one */
+    width: 7.5vh;
     margin-left: 2vmin;
 }
 
 /* The menu itself */
+.menuButton {
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.menuButton>i {
+    color: #fff;
+    font-size: 5vmin;
+    margin-right: 2vw;
+    padding: 0;
+}
+
+.menuButton:hover {
+    scale: 1.1;
+}
+
+.menuButton:active {
+    scale: 0.9;
+}
+
 #myLinks {
     display: none;
     background: #e30e13;
     position: fixed;
     top: 0;
-    right: 0; /* Align it to the right */
-    /* width: 10%; */
-    width: 20vmin;
-    text-align: center;
+    right: 0;
+    width: 30vmin;
+    text-align: left;
     z-index: 1000;
     margin-top: 10.5vmin;
+    border-bottom-left-radius: 1vmin;
+    overflow: hidden;
 }
 
 /* Links inside the menu */
 #myLinks a {
     color: white;
-    padding: 14px 16px;
+    padding: 1vh 1vw;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 1.85vmin;
     display: block;
+    font-family: "pars";
+    transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .icon {
     background: #e30e13;
-    /* display: block; no need?*/
     transition: all 0.3s ease;
     padding: 2vmin 0;
     margin-right: 2vmin;
 }
+
 .icon i {
     color: white;
-    /* font-size: 24px; */
     font-size: 3vmin;
     cursor: pointer;
 }
@@ -93,95 +113,81 @@ header {
     background-color: #e30e13;
     color: white;
 }
-#myLinks a:hover{
+
+#myLinks a:hover {
     background-color: #ca191c;
+    font-size: 3vmin;
 }
-header a:hover{
-    background-color: #ca191c
+
+header a:hover {
+    background-color: #ca191c;
 }
 
 /* Sections */
 .section-1 {
     position: relative;
     width: 100%;
+    height: 90vh;
     overflow: hidden;
-}
-
-.image-container {
-    position: relative;
-    width: 100%;
+    background-image: url(media/main.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     display: flex;
-    margin-top: 9vh;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 7.5vh;
 }
 
-.image-container img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-/* Another solution is to apply a div on top of it, but this also works ok */
-.image-container::before {
-    content: "";
+.BGFilter_Section1{
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(48, 48, 48, 0.911); 
-    mix-blend-mode: multiply; 
-    pointer-events: none; 
+    background: rgba(48, 48, 48, 0.911);
+    mix-blend-mode: multiply;
+    pointer-events: none;
 }
 
-.text-container1 {
-    position: absolute;
-    /* transform: translate(-50%, -50%); */
-    /* top: 0; */
-    color: white;
-    /* padding: 20px; */
-    /* border-radius: 10px; */
-    /* height: 400px; */
-    /* width: 50vh; */
+.section-1 > h1{
+    color: #fff;
     text-align: center;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 50vw;
-    justify-content: center;
-}
-
-.text-container1 h2 {
+    z-index: 2;
     font-size: 8vmin;
+    font-family: "headings";
+}
+
+.section-1 > p{
+    color: #fff;
     text-align: center;
-}
-
-.text-container1 p {
+    z-index: 2;
     font-size: 3vmin;
+    font-family: "pars";
+    width: 50%;
 }
 
-.text-container1 a {
+.section-1 > a {
     background-color: rgba(202, 25, 28, 0.753);
     border-radius: 100vmin;
     backdrop-filter: blur(1vmin);
     color: white;
     text-decoration: none;
     font-size: 3vmin;
-    display: block; 
-    width: fit-content; 
-    text-align: center; 
-    transition: all 0.3s ease;
+    display: block;
+    width: fit-content;
+    text-align: center;
+    transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
     margin-top: 5vmin;
     padding: 1vh 2vw;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
-.text-container1 a:hover {
+.section-1 > a:hover {
     font-size: 3.1vmin;
 }
 
-.text-container1 a:active {
+.section-1 > a:active {
     box-shadow: none;
     transform: translateY(0.75vh);
 }
@@ -207,9 +213,9 @@ video {
     font-size: 30px;
     text-decoration: none;
     color: rgb(255, 255, 255);
-    opacity: 0; 
-    animation: fadeIn 0.5s forwards; 
-    transition: font-size 0.3s ease; 
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+    transition: font-size 0.3s ease;
 }
 
 .dialogue a:hover {
@@ -231,15 +237,15 @@ video {
 
 .dialogue {
     display: none;
-    justify-content: center; 
-    align-items: center; 
-    text-align: center; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .intstory {
     display: none;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     text-align: center;
     position: fixed;
     top: 0;
@@ -250,9 +256,8 @@ video {
     z-index: 1000;
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeInUp 0.5s forwards; 
+    animation: fadeInUp 0.5s forwards;
 }
-
 
 .intstory .content {
     background: rgba(0, 0, 0, 0.8);
@@ -267,7 +272,7 @@ video {
     font-size: 30px;
     cursor: pointer;
     color: rgb(255, 255, 255);
-    transition: font-size 0.3s ease; 
+    transition: font-size 0.3s ease;
 }
 
 .intstory .choices {
@@ -287,6 +292,7 @@ video {
         opacity: 0;
         transform: translateY(20px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -298,6 +304,7 @@ video {
         opacity: 0;
         transform: translateY(20px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -316,16 +323,16 @@ video {
     background-position: center;
 }
 
-.filterBGSection2{
+.filterBGSection2 {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(1, 1, 97, 0.792); 
+    background-color: rgba(1, 1, 97, 0.792);
 }
 
-.textDataSection2{
+.textDataSection2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -334,20 +341,20 @@ video {
     position: relative;
 }
 
-.logoSection2{
+.logoSection2 {
     position: relative;
     height: 20vh;
     margin-bottom: 2vh;
 }
 
-.companyTitleSection2{
+.companyTitleSection2 {
     position: relative;
     font-size: 8vmin;
     color: #fff;
-    font-family: "heading";
+    font-family: "headings";
 }
 
-.companyMottoSection2{
+.companyMottoSection2 {
     position: relative;
     font-size: 4.9vmin;
     color: #fff;
@@ -355,16 +362,16 @@ video {
     margin: 2.5vh 0;
 }
 
-.bottomFlexboxSection2{
+.bottomFlexboxSection2 {
     display: flex;
 }
 
-.bottomFlexboxSection2 > *{
+.bottomFlexboxSection2>* {
     color: #fff;
     margin: 0 5vmin;
 }
 
-.textBox{
+.textBox {
     margin-top: 5vh;
     display: flex;
     justify-content: center;
@@ -373,11 +380,11 @@ video {
     width: 30vmin;
 }
 
-.textBox > *{
+.textBox>* {
     margin-bottom: 2vh;
 }
 
-.textBox > img{
+.textBox>img {
     height: 25vh;
     width: auto;
     border-radius: 100vmin;
@@ -385,18 +392,17 @@ video {
     background-color: #1f1e1e;
 }
 
-.textBox > h1{
+.textBox>h1 {
     font-size: 3vmin;
     color: #fff;
     font-family: "pars";
 }
 
-.textBox > h2{
+.textBox>h2 {
     font-size: 3vmin;
     color: #fff;
     font-family: "pars";
     font-weight: 100;
-
 }
 
 .background {
@@ -405,7 +411,7 @@ video {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; 
+    z-index: 1;
 }
 
 .background img {
@@ -425,29 +431,29 @@ video {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(1, 1, 97, 0.792); 
-    z-index: 2; 
+    background-color: rgba(1, 1, 97, 0.792);
+    z-index: 2;
 }
-
 
 .overlay {
     position: relative;
-    z-index: 3; 
+    z-index: 3;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100%;
 }
-.overlay img{
+
+.overlay img {
     position: relative;
     float: left;
     top: 2%;
-    width:  150px;
+    width: 150px;
     height: 150px;
     background-position: 50% 50%;
-    background-repeat:   no-repeat;
-    background-size:     cover;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* Footer */
@@ -467,12 +473,12 @@ footer {
     margin-left: 25vw;
 }
 
-.infoFooter > h1 { 
+.infoFooter>h1 {
     font-size: 3vmin;
     font-family: "headings";
 }
 
-.infoFooter > p { 
+.infoFooter>p {
     font-size: 1.85vmin;
     font-family: "pars";
     font-weight: 100;
@@ -487,12 +493,12 @@ footer {
     margin-right: 25vw;
 }
 
-.contactFooter > h1{
+.contactFooter>h1 {
     font-size: 3vmin;
     font-family: "headings";
 }
 
-.contactFooter > a{
+.contactFooter>a {
     font-size: 1.85vmin;
     font-weight: 100;
     color: white;
@@ -500,17 +506,41 @@ footer {
     margin-bottom: 1vh;
 }
 
-.fa{
+.fa {
     margin-left: 20px;
     margin-right: 20px;
 }
 
-.copyrightText{
+.copyrightText {
     position: absolute;
     bottom: 0;
     width: 100%;
     text-align: center;
     color: #fff;
-    font-family: 'pars';
+    font-family: "pars";
     font-weight: 100;
+    opacity: 0.25;
+    font-size: 1.14vmin;
+    letter-spacing: 0.1vw;
+}
+
+/* Scroll bar, free template from W3School */
+/* width */
+::-webkit-scrollbar {
+    width: 1vmin;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 1);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ca191c;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #e30e13;
 }
