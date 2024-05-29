@@ -386,7 +386,7 @@ video {
 
 .textBox>img {
     height: 25vh;
-    width: auto;
+    width: 20vh;
     border-radius: 100vmin;
     overflow: hidden;
     background-color: #1f1e1e;
