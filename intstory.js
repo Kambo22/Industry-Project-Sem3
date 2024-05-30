@@ -76,6 +76,7 @@ function hidePopup() {
 
     document.getElementById('popupChoices').style.display = 'none';
     document.getElementById('videoSection').style.display = 'block';
+    document.exitFullscreen();
 }
 
 function saveChoice(choice) {
@@ -90,8 +91,10 @@ function toggleVideoSize() {
     const video = document.getElementById('myVideo');
     if (isOriginalSize) {
         video.style.height = '850px';
+        document.documentElement.requestFullscreen();
     } else {
         video.style.height = '600px';
+        document.exitFullscreen();
     }
     isOriginalSize = !isOriginalSize;
 }
@@ -105,6 +108,7 @@ function endDialogue() {
     popupChoices.innerHTML = choices.map(choice => `<p>${choice}</p>`).join('');
     document.getElementById('endDialogue').style.display = 'none';
     document.getElementById('videosize').style.display = 'none';
+    document.exitFullscreen();
 }
 
 window.onload = function() {
