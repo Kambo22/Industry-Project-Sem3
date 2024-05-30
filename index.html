@@ -6,6 +6,7 @@
 -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,46 +18,39 @@
     <script src="script.js" defer></script>
     <script src="intstory.js" defer></script>
 </head>
-<body>    
+
+<body>
     <!-- Header -->
-        <header>
-            <figure>
-                <img src="media/logo.png" class="logo">
-            </figure>
+    <header>
+        <figure>
+            <img src="media/logo.png" class="logo">
+        </figure>
 
-            <button class="menuButton">
-                <i class="fa fa-bars"></i>
-            </button>
-        </header>
-        <div id="myLinks">
-            <a href="#">Read Their Stories</a>
-            <a href="#">18 September</a>
-            <a href="#">Multimedium</a>
-        </div>
-    <!-- Section 1 -->
-    <!-- <section class="section section-1">
-        <div class="image-container">
-            <div class="text-container1">
-                <h2>18th September Foundation</h2>
-                <p>
-                    Explore our interactive stories of individuals who lived through the liberation of 
-                    Eindhoven in World War II, learning from their experiences, challenges, courage and resilience firsthand as they navigate this historic period.
-                </p>
-                <a href="#" onclick="showPopup()">Click here to see their story</a>
-            </div>
-        </div>
-    </section> -->
+        <button class="menuButton">
+            <i class="fa fa-bars"></i>
+        </button>
+    </header>
+    <div id="myLinks">
+        <a href="#">Read Their Stories</a>
+        <a href="#">18 September</a>
+        <a href="#">Multimedium</a>
+    </div>
 
+    <!-- Section 1, HERO -->
     <section class="section-1">
+        <video class="bgVideoHero" autoplay loop>
+            <source src="media/bgVideoTestFinal.mp4" type="video/mp4">
+          </video>
         <div class="BGFilter_Section1"></div>
         <h1>18th September Foundation</h1>
         <p>
-            Explore our interactive stories of individuals who lived through the liberation of 
-            Eindhoven in World War II, learning from their experiences, challenges, courage and resilience firsthand as they navigate this historic period.
+            Explore our interactive stories of individuals who lived through the liberation of
+            Eindhoven in World War II, learning from their experiences, challenges, courage and resilience firsthand as
+            they navigate this historic period.
         </p>
         <a href="#" onclick="showPopup()">Click here to see their story</a>
     </section>
-    
+
     <div class="intstory" id="intstory">
         <div class="content">
             <span class="close" onclick="hidePopup()">&times;</span>
@@ -70,8 +64,8 @@
             </div>
             <div class="dialogue" data-dialogue="A">
                 <a href="#" onclick="showDialogueAndSetTime('X', 10, 10, 'Option A')">Option A</a>
-                <a href="#" onclick="showDialogueAndSetTime('Y', 60, 10, 'Option B')">Option B</a> 
-                <a href="#" onclick="showDialogueAndSetTime('Z', 60, 10, 'Option C')">Option C</a> 
+                <a href="#" onclick="showDialogueAndSetTime('Y', 60, 10, 'Option B')">Option B</a>
+                <a href="#" onclick="showDialogueAndSetTime('Z', 60, 10, 'Option C')">Option C</a>
             </div>
             <div class="dialogue" data-dialogue="X">
                 <a href="#" onclick="showDialogueAndSetTime('X1', 10, 10, 'Option X')">Option X</a>
@@ -96,7 +90,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Section 2 -->
     <section class="section section-2">
         <section class="textDataSection2">
@@ -139,7 +133,7 @@
                 <br>
                 Address:
             </h1>
-            <p>Postbus 1390, 5602 BJ  Eindhoven</p>
+            <p>Postbus 1390, 5602 BJ Eindhoven</p>
         </section>
         <section class="contactFooter">
             <h1>Contacts</h1>
@@ -150,4 +144,5 @@
         <p class="copyrightText">&copy; 2024 Your Website. All rights reserved.</p>
     </footer>
 </body>
+
 </html>
