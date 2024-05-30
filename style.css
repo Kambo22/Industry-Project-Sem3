@@ -400,10 +400,11 @@ video {
 
 .textBox>img {
     height: 25vh;
-    width: 20vh;
+    width: 10vw;
     border-radius: 100vmin;
     overflow: hidden;
     background-color: #1f1e1e;
+    object-fit: cover;
 }
 
 .textBox>h1 {
