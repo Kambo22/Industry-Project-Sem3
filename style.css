@@ -362,7 +362,7 @@ video {
 
 .intstory .close:hover {
     color: red;
-    font-size: 35px;
+    font-size: 50px;
 }
 
 @keyframes fadeInUp {
@@ -387,6 +387,26 @@ video {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+button#videosize {
+    background: none; /* Remove default button background */
+    border: none; /* Remove default button border */
+    padding: 0; /* Remove default button padding */
+    cursor: pointer; /* Make sure it looks clickable */
+}
+
+.fullscreen-image {
+    width: auto;
+    height: 30px;
+    object-fit: cover;
+    border: none; /* Remove any default button border */
+    margin-right: 14px;
+    transition: height 0.3s ease; 
+}
+
+.fullscreen-image:hover {
+    height: 40px;
 }
 
 .section-2 {

@@ -114,10 +114,14 @@ function toggleVideoSize() {
     if (isOriginalSize) {
         // Enlarge the video and enter fullscreen
         video.style.height = '850px';
+        document.getElementById('intstory').style.backgroundColor = 'black';
+        video.style.height = '900px'
         document.documentElement.requestFullscreen();
     } else {
         // Shrink the video and exit fullscreen
         video.style.height = '600px';
+        document.getElementById('intstory').style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+        video.style.width = 'auto';
         document.exitFullscreen();
     }
     isOriginalSize = !isOriginalSize;
@@ -155,8 +159,10 @@ function toggleFullScreen() {
 document.addEventListener(
     "keydown",
     (e) => {
-        if (e.key === "f") {
+        if (e.key === "f11") {
             toggleFullScreen();
+            video.style.height = '600px'
+            video.style.width = 'auto'
         }
     },
     false,
