@@ -6,6 +6,7 @@
 -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,87 +18,69 @@
     <script src="script.js" defer></script>
     <script src="intstory.js" defer></script>
 </head>
-<body>    
+
+<body>
     <!-- Header -->
-        <header>
-            <img id="Texture" src="media/textureBG.png" alt="">
-            <figure>
-                <img src="media/logo.png" class="logo">
-            </figure>
+    <header>
+        <figure>
+            <img src="media/logo.png" class="logo">
+        </figure>
 
-            <button class="menuButton">
-                <i class="fa fa-bars"></i>
-            </button>
-        </header>
-        <div id="myLinks">
-            <a href="#">Read Their Stories</a>
-            <a href="#">18 September</a>
-            <a href="#">Multimedium</a>
-        </div>
-    <!-- Section 1 -->
-    <!-- <section class="section section-1">
-        <div class="image-container">
-            <div class="text-container1">
-                <h2>18th September Foundation</h2>
-                <p>
-                    Explore our interactive stories of individuals who lived through the liberation of 
-                    Eindhoven in World War II, learning from their experiences, challenges, courage and resilience firsthand as they navigate this historic period.
-                </p>
-                <a href="#" onclick="showPopup()">Click here to see their story</a>
-            </div>
-        </div>
-    </section> -->
+        <button class="menuButton">
+            <i class="fa fa-bars"></i>
+        </button>
+    </header>
+    <div id="myLinks">
+        <a href="#">Read Their Stories</a>
+        <a href="#">18 September</a>
+        <a href="#">Multimedium</a>
+    </div>
 
+    <!-- Section 1, HERO -->
     <section class="section-1">
+        <video class="bgVideoHero" autoplay loop muted>
+            <source src="media/bgVideoFinal.mp4" type="video/mp4">
+          </video>
         <div class="BGFilter_Section1"></div>
         <h1>18th September Foundation</h1>
         <p>
-            Explore our interactive stories of individuals who lived through the liberation of 
-            Eindhoven in World War II, learning from their experiences, challenges, courage and resilience firsthand as they navigate this historic period.
+            Explore our interactive stories of individuals who lived through the liberation of
+            Eindhoven in World War II, learning from their experiences, challenges, courage and resilience firsthand as
+            they navigate this historic period.
         </p>
         <a href="#" onclick="showPopup()">Click here to see their story</a>
     </section>
-    
+
     <div class="intstory" id="intstory">
         <div class="content">
             <span class="close" onclick="hidePopup()">&times;</span>
             <section class="video" id="videoSection">
                 <video id="myVideo">
-                    <source src="media/video.mp4" type="video/mp4">
+                    <source src="media/dummyVideo.mp4" type="video/mp4">
                 </video>
             </section>
+            <button id="videosize" onclick="toggleVideoSize()">Toggle Video Size</button>
             <div class="choices" id="popupChoices" style="display:none;">
                 <!-- Choices will be displayed here -->
             </div>
-            <div class="dialogue" data-dialogue="A">
-                <a href="#" onclick="showDialogueAndSetTime('X', 10, 10, 'Option A')">Option A</a>
-                <a href="#" onclick="showDialogueAndSetTime('Y', 60, 10, 'Option B')">Option B</a> 
-                <a href="#" onclick="showDialogueAndSetTime('Z', 60, 10, 'Option C')">Option C</a> 
+            <div class="dialogue" data-dialogue="A" id="startDialogues">
+                <a href="#" onclick="showDialogueAndSetTime('X', 1, 9)">START</a>
             </div>
             <div class="dialogue" data-dialogue="X">
-                <a href="#" onclick="showDialogueAndSetTime('X1', 10, 10, 'Option X')">Option X</a>
+                <a href="#" onclick="showDialogueAndSetTime('Y', 10, 5.5, 23, 12, 'Left')">Left</a>
+                <a href="#" onclick="showDialogueAndSetTime('Y', 16.20, 6.10, 22.30, 11, 'Right')">Right</a> 
             </div>
             <div class="dialogue" data-dialogue="Y">
-                <a href="#" onclick="showDialogueAndSetTime('Y1', 10, 10, 'Option Y')">Option Y</a>
-            </div>
-            <div class="dialogue" data-dialogue="Z">
-                <a href="#" onclick="showDialogueAndSetTime('Z1', 10, 10, 'Option Z')">Option Z</a>
-            </div>
-            <div class="dialogue" data-dialogue="X1">
-                <a href="#" onclick="showDialogueAndSetTime('E', 10, 10, 'Option X1')">Option X1</a>
-            </div>
-            <div class="dialogue" data-dialogue="Y1">
-                <a href="#" onclick="showDialogueAndSetTime('E', 10, 10, 'Option Y1')">Option Y1</a>
-            </div>
-            <div class="dialogue" data-dialogue="Z1">
-                <a href="#" onclick="showDialogueAndSetTime('E', 10, 10, 'Option Z1')">Option Z1</a>
+                <a href="#" onclick="showDialogueAndSetTime('E', 37.02, 2.20, 49, 8, 'Left')">Left</a>
+                <a href="#" onclick="showDialogueAndSetTime('E', 40.17, 2.50, 49, 8, 'Middle')">Middle</a>
+                <a href="#" onclick="showDialogueAndSetTime('E', 46.17, 2.20, 49, 8, 'Right')">Right</a>
             </div>
             <div class="dialogue" data-dialogue="E" id="endDialogue">
                 <a href="#" onclick="endDialogue()">END</a>
-            </div>
+            </div>            
         </div>
     </div>
-    
+
     <!-- Section 2 -->
     <section class="section section-2">
         <section class="textDataSection2">
@@ -135,7 +118,7 @@
                 <br>
                 Address:
             </h1>
-            <p>Postbus 1390, 5602 BJ  Eindhoven</p>
+            <p>Postbus 1390, 5602 BJ Eindhoven</p>
         </section>
         <section class="contactFooter">
             <h1>Contacts</h1>
@@ -146,4 +129,5 @@
         <p class="copyrightText">&copy; 2024 Your Website. All rights reserved.</p>
     </footer>
 </body>
+
 </html>

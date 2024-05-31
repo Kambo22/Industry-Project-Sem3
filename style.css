@@ -137,15 +137,40 @@ header a:hover {
     width: 100%;
     height: 95vh;
     overflow: hidden;
-    background-image: url(media/main.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top: 7.5vh;
+
+    animation: heroBGZoomOut 10s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+@keyframes heroBGZoomOut {
+    0%{
+        background-size: 200% 200%;
+    }
+    100%{
+        background-size: cover;
+    }
+}
+
+.bgVideoHero{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    opacity: 0;
+    animation: bgVideoFadeIn 5s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+@keyframes bgVideoFadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 .BGFilter_Section1{
@@ -163,6 +188,10 @@ header a:hover {
     z-index: 2;
     font-size: 8vmin;
     font-family: "headings";
+    transform: translateY(-5vmin);
+    opacity: 0;
+
+    animation: titleDropIn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
 }
 
 .section-1 > p{
@@ -172,6 +201,10 @@ header a:hover {
     font-size: 3vmin;
     font-family: "pars";
     width: 50%;
+    transform: translateY(-5vmin);
+    opacity: 0;
+
+    animation: descriptionDropIn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
 }
 
 .section-1 > a {
@@ -189,6 +222,43 @@ header a:hover {
     padding: 1vh 2vw;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
         rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    transform: translateY(-5vmin);
+    opacity: 0;
+
+    animation: linkDropIn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards;
+}
+
+@keyframes titleDropIn {
+    0%{
+        transform: translateY(-5vmin);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0vmin);
+        opacity: 1;
+    }
+}
+
+@keyframes descriptionDropIn {
+    0%{
+        transform: translateY(-5vmin);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0vmin);
+        opacity: 1;
+    }
+}
+
+@keyframes linkDropIn {
+    0%{
+        transform: translateY(-5vmin);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0vmin);
+        opacity: 1;
+    }
 }
 
 .section-1 > a:hover {
@@ -197,7 +267,7 @@ header a:hover {
 
 .section-1 > a:active {
     box-shadow: none;
-    transform: translateY(0.75vh);
+    scale: 0.95;
 }
 
 .video {
@@ -394,10 +464,11 @@ video {
 
 .textBox>img {
     height: 25vh;
-    width: 20vh;
+    width: 10vw;
     border-radius: 100vmin;
     overflow: hidden;
     background-color: #1f1e1e;
+    object-fit: cover;
 }
 
 .textBox>h1 {
