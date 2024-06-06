@@ -50,13 +50,13 @@
         </p>
         <a href="#" onclick="showPopup()">Click here to see their story</a>
     </section>
-
+   
     <div class="intstory" id="intstory">
         <div class="content">
             <span class="close" onclick="hidePopup()">&times;</span>
             <section class="video" id="videoSection">
-                <video id="myVideo">
-                    <source src="media/dummyVideo.mp4" type="video/mp4">
+                <video id="myVideo" controls>
+                    <source src="media/Interactive_Video_V1.mp4" type="video/mp4">
                 </video>
             </section>
             <button id="videosize" onclick="toggleVideoSize()">
@@ -66,16 +66,28 @@
                 <!-- Choices will be displayed here -->
             </div>
             <div class="dialogue" data-dialogue="A" id="startDialogues">
-                <a href="#" onclick="showDialogueAndSetTime('X', 1, 9)">START</a>
+                <a href="#" onclick="showDialogueAndSetTime('X', 0.1, 108 )">START</a>
             </div>
             <div class="dialogue" data-dialogue="X">
-                <a href="#" onclick="showDialogueAndSetTime('Y', 10, 5.5, 23, 12, 'Left')">Left</a>
-                <a href="#" onclick="showDialogueAndSetTime('Y', 16.20, 6.10, 22.30, 11, 'Right')">Right</a> 
+                <a href="#" onclick="showDialogueAndSetTime('Y', 107.5, 46.5, 'Choice 1')">Go with them</a>
+                <a href="#" onclick="showDialogueAndSetTime('Y', 545, 128, 'Choice 1')">Go into hiding</a>
             </div>
             <div class="dialogue" data-dialogue="Y">
-                <a href="#" onclick="showDialogueAndSetTime('E', 37.02, 2.20, 49, 8, 'Left')">Left</a>
-                <a href="#" onclick="showDialogueAndSetTime('E', 40.17, 2.50, 49, 8, 'Middle')">Middle</a>
-                <a href="#" onclick="showDialogueAndSetTime('E', 46.17, 2.20, 49, 8, 'Right')">Right</a>
+                <a href="#" onclick="showDialogueAndSetTime('Z', 154, 112,'Choice 2')">Go see brothers and dad</a>
+                <a href="#" onclick="showDialogueAndSetTime('Z1', 673, 15,'Choice 2')">Make a run for it</a>
+            </div>
+            <div class="dialogue" data-dialogue="Z">
+                <a href="#" onclick="showDialogueAndSetTime('X1', 266 , 86, 'Choice 3')">Observe them</a>
+                <a href="#" onclick="showDialogueAndSetTime('X1', 688 , 31, 291, 61, 'Choice 3')">Join the kids</a>
+            </div>
+            <div class="dialogue" data-dialogue="X1">
+                <a href="#" onclick="showDialogueAndSetTime('Y1', 352 , 105.5, 'Choice 4')">Run Away</a>
+            </div>
+            <div class="dialogue" data-dialogue="Y1">
+                <a href="#" onclick="showDialogueAndSetTime('E', 458 , 87, 'Choice 5')">Stay silent</a>
+            </div>
+            <div class="dialogue" data-dialogue="Z1">
+                <a href="#" onclick="showDialogueAndSetTime('Y', 0 , 0, 'Choice 5')">Go back to choice 2</a>
             </div>
             <div class="dialogue" data-dialogue="E" id="endDialogue">
                 <a href="#" onclick="endDialogue()">END</a>

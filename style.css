@@ -278,7 +278,6 @@ header a:hover {
 
 video {
     height: 600px;
-    pointer-events: none;
 }
 
 .dialogue {
