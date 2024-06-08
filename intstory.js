@@ -175,3 +175,33 @@ function clearTimeouts() {
         clearTimeout(i);
     }
 }
+
+let videoSizeButton = document.getElementById('videosize');
+let closeButton = document.querySelector('.close');
+let timeout;
+
+function hideButtons() {
+    videoSizeButton.classList.add('hidden');
+    closeButton.classList.add('hidden');
+}
+
+function showButtons() {
+    videoSizeButton.classList.remove('hidden');
+    closeButton.classList.remove('hidden');
+}
+
+function resetInactivityTimeout() {
+    clearTimeout(timeout);
+    showButtons();
+    timeout = setTimeout(hideButtons, 5000);
+}
+
+// Hide the buttons after 5 seconds of mouse inactivity
+timeout = setTimeout(hideButtons, 1000);
+
+// Reset the timeout when the mouse is moved
+document.addEventListener('mousemove', resetInactivityTimeout);
+
+// Reset the timeout when interacting with the video size button or close button
+videoSizeButton.addEventListener('click', resetInactivityTimeout);
+closeButton.addEventListener('click', resetInactivityTimeout);

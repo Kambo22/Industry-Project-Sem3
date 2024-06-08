@@ -288,7 +288,7 @@ video {
 
 .dialogue a {
     margin-right: 15px;
-    font-size: 30px;
+    font-size: 28px;
     text-decoration: none;
     color: rgb(255, 255, 255);
     opacity: 0;
@@ -396,17 +396,26 @@ button#videosize {
     cursor: pointer; /* Make sure it looks clickable */
 }
 
+#videosize, .close {
+    transition: opacity 0.5s;
+}
+.hidden {
+    opacity: 0;
+}
+
+
 .fullscreen-image {
     width: auto;
-    height: 30px;
+    height: 20px;
     object-fit: cover;
     border: none; /* Remove any default button border */
     margin-right: 14px;
+    margin-top: 2px;
     transition: height 0.3s ease; 
 }
 
 .fullscreen-image:hover {
-    height: 40px;
+    height: 28px;
 }
 
 .section-2 {
