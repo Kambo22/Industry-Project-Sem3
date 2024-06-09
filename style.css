@@ -32,12 +32,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #670202;
+    background: linear-gradient(140deg, #670202, #e30e13);
     color: #fff;
     z-index: 999;
     padding: 1.5vmin 0;
     background-size: cover;
-    
 }
 #Texture{
     width: 100%;
@@ -511,6 +510,7 @@ button#videosize {
     color: #fff;
     font-family: "pars";
     font-weight: 100;
+    text-align: center;
 }
 
 .background {
